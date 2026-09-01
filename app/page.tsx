@@ -176,9 +176,36 @@ export default function Home() {
           <p>Somos un equipo que reúne negocio, tecnología y diseño para convertir una idea nacida en la universidad en una empresa con impacto real y potencial global.</p>
         </div>
         <div className="team-list">
-          <article data-reveal><div className="person-mark">PG</div><div><span>01 · Estrategia</span><h3>Paloma González</h3><p>Visión, modelo de negocio y comunicación.</p></div><ArrowUpRight size={24} /></article>
-          <article data-reveal><div className="person-mark">EA</div><div><span>02 · Tecnología</span><h3>Emilio Abarca</h3><p>Desarrollo e integración del producto.</p></div><ArrowUpRight size={24} /></article>
-          <article data-reveal><div className="person-mark">MV</div><div><span>03 · Experiencia</span><h3>Mariana Vercellino</h3><p>Diseño de interacción e investigación con usuarios.</p></div><ArrowUpRight size={24} /></article>
+          <article data-reveal>
+            <a className="team-member" href="https://www.linkedin.com/in/pgonzalezroman/" target="_blank" rel="noreferrer" aria-label="Ver el perfil de LinkedIn de Paloma González Román">
+              <div className="person-photo">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="./images/team-paloma.jpg" alt="Retrato de Paloma González Román" />
+              </div>
+              <div><span>01 · Estrategia</span><h3>Paloma González Román</h3><p>Visión, modelo de negocio y comunicación.</p></div>
+              <span className="team-profile-cta">LinkedIn <ArrowUpRight size={17} /></span>
+            </a>
+          </article>
+          <article data-reveal>
+            <a className="team-member" href="https://www.linkedin.com/in/emilioabarcar/" target="_blank" rel="noreferrer" aria-label="Ver el perfil de LinkedIn de Emilio Abarca">
+              <div className="person-photo">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="./images/team-emilio.jpg" alt="Retrato de Emilio Abarca" />
+              </div>
+              <div><span>02 · Tecnología</span><h3>Emilio Abarca</h3><p>Desarrollo e integración del producto.</p></div>
+              <span className="team-profile-cta">LinkedIn <ArrowUpRight size={17} /></span>
+            </a>
+          </article>
+          <article data-reveal>
+            <a className="team-member" href="https://www.linkedin.com/in/mariana-vercellino-krause-97217329a/" target="_blank" rel="noreferrer" aria-label="Ver el perfil de LinkedIn de Mariana Vercellino Krause">
+              <div className="person-photo">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="./images/team-mariana.jpg" alt="Retrato de Mariana Vercellino Krause" />
+              </div>
+              <div><span>03 · Experiencia</span><h3>Mariana Vercellino Krause</h3><p>Diseño de interacción e investigación con usuarios.</p></div>
+              <span className="team-profile-cta">LinkedIn <ArrowUpRight size={17} /></span>
+            </a>
+          </article>
         </div>
       </section>
 
@@ -188,6 +215,11 @@ export default function Home() {
           <h2>Hay miles de trayectos por delante.<br /><em>Queremos que cada uno termine bien.</em></h2>
           <p>Buscamos empresas, conductores y aliados que quieran construir con nosotros la próxima forma de prevenir la fatiga.</p>
           <div className="pilot-badge"><span className="pulse" /> Piloto 2026 · Conversaciones abiertas</div>
+          <div className="contact-links" aria-label="Contactar al equipo por LinkedIn">
+            <a href="https://www.linkedin.com/in/pgonzalezroman/" target="_blank" rel="noreferrer">Paloma <ArrowUpRight size={15} /></a>
+            <a href="https://www.linkedin.com/in/emilioabarcar/" target="_blank" rel="noreferrer">Emilio <ArrowUpRight size={15} /></a>
+            <a href="https://www.linkedin.com/in/mariana-vercellino-krause-97217329a/" target="_blank" rel="noreferrer">Mariana <ArrowUpRight size={15} /></a>
+          </div>
         </div>
       </section>
 
