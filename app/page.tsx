@@ -27,7 +27,6 @@ export default function Home() {
 
       <section className="hero" id="inicio">
         <div className="hero-copy">
-          <p className="eyebrow"><span /> Seguridad vial, reimaginada</p>
           <h1>Un viaje más<br />seguro empieza<br />con una conversación.</h1>
           <p className="hero-lede">El copiloto digital que ayuda a reconocer el cansancio antes de que se transforme en riesgo. Sin cámaras. Sin vigilancia.</p>
           <div className="hero-actions">
@@ -35,17 +34,14 @@ export default function Home() {
             <span className="micro-proof">Diseñado en Chile<br />para moverse por el mundo.</span>
           </div>
         </div>
-        <div className="hero-visual" aria-label="Trayecto abstracto interactivo en tres dimensiones">
+        <div className="hero-visual" aria-hidden="true">
           <HeroScene />
-          <div className="visual-caption"><span>01</span><p>Acompaña el trayecto.<br />Actúa antes del riesgo.</p></div>
-          <div className="visual-hint">Mueve el cursor</div>
         </div>
         <a className="scroll-cue" href="#problema">Explorar <span>↓</span></a>
       </section>
 
       <section className="problem" id="problema">
         <div className="problem-intro" data-reveal>
-          <p className="eyebrow light"><span /> El momento que importa</p>
           <h2>La fatiga no llega de golpe.<br /><em>El riesgo, sí.</em></h2>
         </div>
         <div className="problem-grid">
@@ -71,7 +67,6 @@ export default function Home() {
       <section className="manifesto">
         <div className="manifesto-orbit orbit-one" data-drift />
         <div className="manifesto-orbit orbit-two" data-drift />
-        <p className="eyebrow centered"><span /> Una decisión de diseño</p>
         <div className="manifesto-lines">
           <p data-reveal>No estamos construyendo otra alarma.</p>
           <p className="soft" data-reveal>Estamos construyendo el momento</p>
@@ -85,7 +80,6 @@ export default function Home() {
       </section>
 
       <section className="journey-title">
-        <p className="eyebrow"><span /> Un copiloto que no distrae</p>
         <h2 data-reveal>Pregunta poco.<br />Entiende el contexto.<br /><em>Actúa cuando importa.</em></h2>
         <p data-reveal>Durante la conducción: voz y brevedad.<br />En pantalla: solo con el vehículo detenido.</p>
       </section>
@@ -94,7 +88,6 @@ export default function Home() {
 
       <section className="difference" id="diferencia">
         <div className="difference-heading" data-reveal>
-          <p className="eyebrow"><span /> Nuestra diferencia</p>
           <h2>No te observa.<br /><em>Te acompaña.</em></h2>
           <p>La seguridad puede ser rigurosa sin sentirse invasiva. WePilot funciona principalmente mediante software, conversación y contexto.</p>
         </div>
@@ -127,7 +120,6 @@ export default function Home() {
       <section className="business" id="modelo">
         <div className="business-top">
           <div data-reveal>
-            <p className="eyebrow light"><span /> Quién lo usa y quién lo impulsa</p>
             <h2>El conductor usa WePilot.<br /><em>La empresa convierte la señal en prevención.</em></h2>
           </div>
           <p data-reveal>Una solución, tres niveles de impacto. Empezamos donde el problema es cotidiano y diseñamos para escalar donde el impacto puede multiplicarse.</p>
@@ -157,7 +149,6 @@ export default function Home() {
 
       <section className="validation">
         <div className="validation-copy" data-reveal>
-          <p className="eyebrow"><span /> Construir con evidencia</p>
           <h2>Una hipótesis ambiciosa.<br /><em>Una validación rigurosa.</em></h2>
           <p>WePilot está en etapa de prototipo. Nuestra energía emprendedora no viene de exagerar lo que existe, sino de tener claridad sobre qué queremos construir y cómo vamos a demostrar que funciona.</p>
         </div>
@@ -181,7 +172,6 @@ export default function Home() {
 
       <section className="team" id="equipo">
         <div className="team-heading" data-reveal>
-          <p className="eyebrow"><span /> El equipo detrás de WePilot</p>
           <h2>Tres miradas.<br /><em>Una nueva forma de cuidar.</em></h2>
           <p>Somos un equipo que reúne negocio, tecnología y diseño para convertir una idea nacida en la universidad en una empresa con impacto real y potencial global.</p>
         </div>
@@ -195,7 +185,6 @@ export default function Home() {
       <section className="finale" id="piloto">
         <div className="finale-glow" aria-hidden="true" />
         <div className="finale-content" data-reveal>
-          <p className="eyebrow centered"><span /> Próximo destino</p>
           <h2>Hay miles de trayectos por delante.<br /><em>Queremos que cada uno termine bien.</em></h2>
           <p>Buscamos empresas, conductores y aliados que quieran construir con nosotros la próxima forma de prevenir la fatiga.</p>
           <div className="pilot-badge"><span className="pulse" /> Piloto 2026 · Conversaciones abiertas</div>
