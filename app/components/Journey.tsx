@@ -1,9 +1,10 @@
 'use client';
 
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Float, RoundedBox } from '@react-three/drei';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { Float } from '@react-three/drei';
+import { Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import * as THREE from 'three';
+import TruckModel from './TruckModel';
 
 const steps = [
   { number: '01', kicker: 'Antes de partir', title: 'Entiende el trayecto.', body: 'Duración estimada, tiempo acumulado de conducción y tipo de ruta crean el contexto inicial.' },
@@ -11,25 +12,6 @@ const steps = [
   { number: '03', kicker: 'Cuando importa', title: 'Convierte señales en una pausa.', body: 'WePilot recomienda hidratarse, moverse, descansar o detenerse antes de que el cansancio se transforme en riesgo.' },
   { number: '04', kicker: 'Vehículo detenido', title: 'Ayuda a decidir antes de continuar.', body: 'Un chequeo breve de atención puede orientar una recomendación clara y preventiva.' },
 ];
-
-function MiniCar() {
-  return (
-    <group rotation={[0.04, -0.2, 0]}>
-      <RoundedBox args={[1.45, 0.4, 0.72]} radius={0.16} smoothness={5}>
-        <meshStandardMaterial color="#f7f7f2" roughness={0.3} />
-      </RoundedBox>
-      <RoundedBox args={[0.78, 0.3, 0.58]} radius={0.12} smoothness={5} position={[-0.08, 0.27, 0]}>
-        <meshPhysicalMaterial color="#7895ff" roughness={0.1} transmission={0.15} />
-      </RoundedBox>
-      {[-0.44, 0.44].flatMap((x) => [-0.38, 0.38].map((z) => (
-        <mesh key={`${x}-${z}`} position={[x, -0.23, z]} rotation={[Math.PI / 2, 0, 0]}>
-          <cylinderGeometry args={[0.16, 0.16, 0.1, 28]} />
-          <meshStandardMaterial color="#050507" />
-        </mesh>
-      )))}
-    </group>
-  );
-}
 
 function JourneyWorld({ active }: { active: number }) {
   const world = useRef<THREE.Group>(null);
@@ -61,7 +43,13 @@ function JourneyWorld({ active }: { active: number }) {
         <tubeGeometry args={[curve, 160, 0.026, 10, false]} />
         <meshBasicMaterial color="#6f8cff" />
       </mesh>
-      <group ref={car}><Float speed={1.2} floatIntensity={0.08} rotationIntensity={0.03}><MiniCar /></Float></group>
+      <group ref={car}>
+        <Float speed={1.05} floatIntensity={0.055} rotationIntensity={0.018}>
+          <Suspense fallback={null}>
+            <TruckModel finish="cobalt" scale={0.34} rotation={[0.035, -0.56, -0.015]} />
+          </Suspense>
+        </Float>
+      </group>
       {[0.30, 0.43, 0.59, 0.72].map((point, index) => {
         const position = curve.getPoint(point);
         return (
@@ -107,9 +95,9 @@ export default function Journey() {
         <Canvas camera={{ position: [0, 0, 9.2], fov: 43 }} dpr={[1, 1.5]}>
           <color attach="background" args={['#111113']} />
           <fog attach="fog" args={['#111113', 7, 14]} />
-          <ambientLight intensity={1.1} />
-          <directionalLight position={[3, 5, 5]} intensity={3.8} color="#ffffff" />
-          <directionalLight position={[-4, -3, 4]} intensity={2.2} color="#3157ff" />
+          <ambientLight intensity={0.9} />
+          <directionalLight position={[3, 5, 5]} intensity={3.15} color="#ffffff" />
+          <directionalLight position={[-4, -3, 4]} intensity={1.6} color="#7895ff" />
           <JourneyWorld active={active} />
         </Canvas>
         <div className="stage-note"><span className="pulse" /> La pantalla espera. La voz acompaña.</div>

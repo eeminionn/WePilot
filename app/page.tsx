@@ -99,14 +99,23 @@ export default function Home() {
           <p>La seguridad puede ser rigurosa sin sentirse invasiva. WePilot funciona principalmente mediante software, conversación y contexto.</p>
         </div>
         <div className="difference-panel" data-reveal>
-          <div className="radar" aria-hidden="true"><span /><span /><span /><div><EyeOff size={34} strokeWidth={1.15} /></div></div>
-          <p className="panel-label">Lo que decidimos dejar fuera</p>
-          <ul>
-            <li><span>Cámaras al rostro</span><b>No</b></li>
-            <li><span>Sensores fisiológicos</span><b>No</b></li>
-            <li><span>Hardware especializado</span><b>No</b></li>
-            <li className="yes"><span>Acompañamiento preventivo</span><b>Sí</b></li>
-          </ul>
+          <figure className="difference-media">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="./images/scenic-semi.jpg" alt="Camión de carga circulando por una ruta extensa entre montañas" />
+            <div className="radar" aria-hidden="true"><span /><span /><span /><div><EyeOff size={30} strokeWidth={1.15} /></div></div>
+            <figcaption><span>Sin vigilancia visual</span>La confianza también es parte de la seguridad.</figcaption>
+          </figure>
+          <div className="difference-system">
+            <p className="panel-label">Lo que decidimos dejar fuera</p>
+            <p className="panel-intro">Menos fricción para adoptar. Más claridad para actuar.</p>
+            <ul>
+              <li><span>Cámaras al rostro</span><b>No</b></li>
+              <li><span>Sensores fisiológicos</span><b>No</b></li>
+              <li><span>Hardware especializado</span><b>No</b></li>
+              <li className="yes"><span>Acompañamiento preventivo</span><b>Sí</b></li>
+            </ul>
+            <p className="privacy-note"><ShieldCheck size={17} /> Privacidad desde el diseño, no como una promesa posterior.</p>
+          </div>
         </div>
         <div className="benefit-grid">
           <article data-reveal><Radio size={22} /><span>01</span><h3>Más humano para quien conduce.</h3><p>La ayuda se percibe como acompañamiento, no como castigo o vigilancia.</p></article>
@@ -123,10 +132,21 @@ export default function Home() {
           </div>
           <p data-reveal>Una solución, tres niveles de impacto. Empezamos donde el problema es cotidiano y diseñamos para escalar donde el impacto puede multiplicarse.</p>
         </div>
-        <div className="impact-lanes">
-          <article data-reveal><span>Conductor</span><MessageCircle size={28} /><h3>Acompañamiento claro, privado y no distractor.</h3></article>
-          <article data-reveal><span>Supervisor</span><Radio size={28} /><h3>Una alerta comprensible para actuar a tiempo.</h3></article>
-          <article data-reveal><span>Empresa</span><Building2 size={28} /><h3>Trazabilidad para fortalecer su cultura de seguridad.</h3></article>
+        <div className="business-showcase">
+          <figure className="business-editorial" data-reveal>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="./images/chile-road.jpg" alt="Camiones recorriendo una ruta de montaña con curvas pronunciadas en Chile" />
+            <div className="business-editorial-copy">
+              <span>Operaciones reales · Rutas de alta exigencia</span>
+              <h3>La prevención también se diseña para los kilómetros que nadie ve.</h3>
+            </div>
+            <figcaption>Chile Chico, Aysén</figcaption>
+          </figure>
+          <div className="impact-lanes">
+            <article data-reveal><span>Conductor</span><MessageCircle size={28} /><h3>Acompañamiento claro, privado y no distractor.</h3></article>
+            <article data-reveal><span>Supervisor</span><Radio size={28} /><h3>Una alerta comprensible para actuar a tiempo.</h3></article>
+            <article data-reveal><span>Empresa</span><Building2 size={28} /><h3>Trazabilidad para fortalecer su cultura de seguridad.</h3></article>
+          </div>
         </div>
         <div className="market-card" data-reveal>
           <div><p>Primera entrada al mercado</p><h3>Empresas chilenas de transporte y logística con flotas de 20 a 150 conductores.</h3></div>
@@ -142,11 +162,19 @@ export default function Home() {
           <p>WePilot está en etapa de prototipo. Nuestra energía emprendedora no viene de exagerar lo que existe, sino de tener claridad sobre qué queremos construir y cómo vamos a demostrar que funciona.</p>
         </div>
         <div className="validation-roadmap" data-reveal>
-          <div className="roadmap-line"><i style={{ width: '34%' }} /></div>
-          <div className="roadmap-points">
-            <div className="done"><span /> <small>Hoy</small><strong>Prototipo en validación</strong></div>
-            <div><span /> <small>Próximo hito</small><strong>2 empresas · 30 conductores</strong></div>
-            <div><span /> <small>Visión</small><strong>Seguridad conversacional para Latinoamérica</strong></div>
+          <div className="validation-goal">
+            <span>Lo que queremos demostrar</span>
+            <strong>Intervenir antes.</strong>
+            <p>Más pausas oportunas, mejor percepción de riesgo y una experiencia que los conductores quieran volver a usar.</p>
+          </div>
+          <div className="roadmap-track">
+            <p>Ruta de validación · 2026—2027</p>
+            <div className="roadmap-line"><i style={{ width: '34%' }} /></div>
+            <div className="roadmap-points">
+              <div className="done"><span /> <small>Hoy</small><strong>Prototipo en validación</strong></div>
+              <div><span /> <small>Próximo hito</small><strong>2 empresas · 30 conductores</strong></div>
+              <div><span /> <small>Visión</small><strong>Seguridad conversacional para Latinoamérica</strong></div>
+            </div>
           </div>
         </div>
       </section>
@@ -177,7 +205,14 @@ export default function Home() {
       <footer>
         <a className="wordmark inverted" href="#inicio">wePilot<span>.</span></a>
         <p>Seguridad conversacional para la movilidad.</p>
-        <div><span>Santiago, Chile</span><span>© 2026 WePilot</span></div>
+        <div className="footer-end">
+          <div><span>Santiago, Chile</span><span>© 2026 WePilot</span></div>
+          <small>
+            <a href="https://poly.pizza/m/y8lBpvMlim" target="_blank" rel="noreferrer">3D J-Toastie · CC BY</a>
+            <a href="https://www.pexels.com/photo/semi-truck-on-scenic-highway-with-mountains-34902065/" target="_blank" rel="noreferrer">Foto Omar Gerardo</a>
+            <a href="https://www.pexels.com/photo/zigzag-road-on-mountainside-14143647/" target="_blank" rel="noreferrer">Foto Wandering Bo</a>
+          </small>
+        </div>
       </footer>
     </main>
   );
